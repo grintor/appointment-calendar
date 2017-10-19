@@ -1,0 +1,129 @@
+/* Responsive css */
+ 
+@media screen and (min-width: 200px) and (max-width: 480px){
+	#calendar{
+		display:none;
+	}
+
+	#AppFirstModal,#AppSecondModal,#AppThirdModal,#AppForthModalFinal{
+		position:relative;
+		width:100%;
+	}
+	.apcal_modal{
+		position:relative !important; 
+		left:0;
+		width:100% !important;
+		margin:0 auto;
+		bottom:100px;
+	 }
+	 
+	 #firdiv,#secdiv{
+		width: 100% !important;
+		margin:0 !important;
+		padding:10px 0;
+	 }
+	 
+	 .apcal_btn{
+		margin:10px 0;
+	 }
+	 
+	 #secdiv strong{
+		display:inline-block;
+		margin:5px 0;
+	 }
+	 
+	 .apcal_modal-body{
+		max-height:none;
+		padding:24px;
+	 }
+	 
+	 .container{
+		width:100%;
+	 }
+	 
+	 #date1_frame,#check-client-email,.apcal_modal-body input[type="text"],.apcal_modal-body select,.apcal_modal-body textarea{
+		width:100%;
+	 }
+	 
+	 #AppForthModalFinal .apcal_btn{
+		margin-left:1% !important;
+	 }
+
+}
+ 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+	#calendar{
+		display:none;
+	}
+
+	#AppFirstModal,#AppSecondModal,#AppThirdModal,#AppForthModalFinal{
+		position:relative;
+		width:100%;
+	}
+	.apcal_modal{
+		position:relative !important; 
+		left:0;
+		width:100% !important;
+		margin:0 auto;
+		bottom:100px;
+	 }
+	 
+	 #firdiv,#secdiv{
+		width: 98% !important;
+		margin:0 !important;
+	 }
+	 
+	 .apcal_btn{
+		margin:10px 0;
+	 }
+	 
+	 #secdiv strong{
+		display:inline-block;
+		margin:5px 0;
+	 }
+	 
+	 .apcal_modal-body{
+		max-height:none;
+	 }
+	 
+	 .container{
+		width:100%;
+	 }
+}
+ 
+@media screen and (min-width: 959px) and (max-width: 1200px){
+	#AppFirstModal,#AppSecondModal,#AppThirdModal,#AppForthModalFinal{
+		position:relative;
+		width:100%;
+	}
+	.apcal_modal{
+		position:relative !important; 
+		left:0;
+		width:100% !important;
+		margin:0 auto;
+		bottom:500px;
+	 }
+	 
+	 #firdiv,#secdiv{
+		width: 45% !important;
+		margin:0 !important;
+	 }
+	 
+	 .apcal_btn{
+		margin:10px 0;
+	 }
+	 
+	 #secdiv strong{
+		display:inline-block;
+		margin:5px 0;
+	 }
+	 
+	 .apcal_modal-body{
+		max-height:none;
+	 }
+}
+
+ 
+
+ 

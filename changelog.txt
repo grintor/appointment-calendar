@@ -1,0 +1,206 @@
+VER 3.6.5 (Dec 17th 2015)
+==============================
+-- Enhancement : The Booking Calendar is now Responsive
+-- Enhancement: The Manage Appointment Table is now Ajax Based
+-- Enhancement : The Plugin pulls appointments from Google Calendar between a selected time frame. This will prevent time out error for large calendars
+-- Bug Fix : Fixed Special Calendar Issue affaecting Google Sync
+-- Bug Fix : Changed Payment Transaction id type to int. It fixes the "Could not delete table" bug
+-- Bug Fix: Fixed mysql_insert_id() php version compatibility issue
+-- Modification: Renamed the Error class in google calendar library to make plugin compatible with WP 4.4 
+
+
+
+VER 3.6.4 (SEP 9th 2015)
+==============================
+-- Modification : Phone Numbers now stored as Varchar. Changed from Bigint. 
+
+VER 3.6.3 (AUG 24th 2015)
+==============================
+-- Bug Fix: Fixed ucwords issue.  
+-- Bug Fix: Fixed a compatibility Issu. mySql_insert_id() function not work with latest versions of php,  so replaced it with $wpdb->insert_id.
+-- Bug Fix: Fixed Date Format Issue in button and Mobile Shortcode.   
+-- Bug Fix: Fixed the issue where a client does not recieve notification when booking for the first time.    
+
+
+
+
+VER 3.6.2 (Feb 16th 2015)
+==============================
+-- Bug Fix: The Google Calendar Bug which interfered with two way sync has been fixed 
+-- Bug Fix: Fixed a TimeOff Bug
+-- Improvement: The Google calendar Settings Screen now has validation messages. 
+
+
+VER 3.6.1 (June 23rd 2014)
+==============================
+-- Improvement: Hide staff selection if service has single staff assigned - 23 june 2014
+
+
+
+VER 3.6 (March 12th 2014)
+==============================
+
+-- Improvement: Small Calendar (date picker section settings) - 18 june 2014
+-- Improvement: Appointment filter by service - 17 june 2014
+-- Improvement: Appointment filter by staff - 17 june 2014
+
+-- Bug Fixed: Appointment default status 'approved' set in admin notification subject & body
+-- Bug Fixed: Notification [client-si] bug fixed
+-- Bug Fixed: Special charcters not saving in message
+-- Improvement: Remove unused tag [app-note]
+-- Improvement: Fullcalendar coumn date foramt
+-- Improvement: Two tags added [client-phone], [client-si]
+-- New Feature: Staff appointment reminder
+-- New Feature: Notify admin on cancel appoiintment (6th May 2014)
+
+
+VER 3.5.5 (March 12th 2014)
+==============================
+-- Bug Fixed: Color legend images removed from admin dashboard (5th April 2014)
+-- New Database: New extra_fileds, color field added in appointment & staff table (11th March 2014)
+-- New Feature: Staff Appointment Color (11th March 2014)
+
+==============================
+VER 3.5.4 (December 18th 2013)
+==============================
+-- New Database: Staff Appointment Google Calendar Sync Details Table added (4th March 2014)
+-- New Feature: Staff Google Calendar Sync (4th March 2014)
+
+-- New Feature: New Appointment Status (26th Feb 2014)
+-- New Feature: User Registration Enable Disable (3rd Feb 2014)
+-- New Feature: Client User profile on booking (18th Jan 2014)
+-- New Feature: Booking using existing user profile through email (18th Jan 2014)
+-- New Feature: Client booking management dashboard (18th Jan 2014)
+
+-- New Feature: Coupon Code (December 18th 2013)
+-- Bug Fixed: Hardcore currency code (December 25th 2013)
+
+
+
+==============================
+VER 3.5.3 (November 11th 2013)
+==============================
+-- New Feature: Staff notifications and enable/disable option setting for staff notification
+-- New Feature: Booking instructions
+-- Bug Fixed: Notification message typos fixed 'saveing' 'appoointment'
+-- Bug Fixed: Show logged in staff appointments only in staff admin dashboard
+-- Bug Fixed: Weekly reurring appointments (same day filter)
+-- Bug Fixed: Reminder message body variable corrected
+-- Bug Fixed: Paypal class object declaration corrected
+
+
+==============================
+VER 3.5.2 (October 18th 2013)
+==============================
+-- New Feature: Export appointments & clients
+-- New Feature: Show or hide  service cost and duration
+-- Improvement: Staff Calendar with manage appointments page
+-- Improvement: Iconic Interface
+-- Bug Fixed: Strip special charcter at client form submission
+-- Bug Fixed: Client pagination
+
+
+==============================
+VER 3.5.1 (September 3rd 2013)
+==============================
+-- Improvement: Default service category rename option
+-- Improvement: Default staff group rename option
+-- Improvement: Service listing with Category
+-- Improvement: Date field design
+-- Improvement: Post content and shortcode content hierarchy maintained
+-- Bug Fixed: Plugin and directory basename dynamic
+-- Bug Fixed: Button & Mobile shortcode text 
+-- Bug Fixed: Loading icon url dynamic
+-- Bug Fixed: Meassage on business close, staff business close, all staff appointments booked changed to correctly
+
+
+=========
+VER 3.5
+=========
+-- Improvement: Big background calendar included in transaltion file
+-- Bug Fixed: Typos
+
+
+=========
+VER 3.4
+=========
+-- New Feature: 2 Way Google Sync
+-- New Feature: Email Reminder
+-- New Feature: Capacity booking (On approved appointment)
+-- Bug Fixed: Date-picker position fixed
+-- Bug Fixed: Appointment_key filed type change char to text
+
+=========
+VER 3.3
+=========
+-- New Feature: Fullcalendar language changable
+-- Bug Fixed: Safari & IE compltible date function
+-- Bug FIxed: Fullcalendar title with single quote 
+
+
+=========
+VER 3.2.1
+=========
+
+28th January
+--Typo Fixed: Spells on all model windows
+
+15th January
+-- New Feature: Get seleted date in booking form
+
+12th January 
+-- Bug Fixed: TimeOff time camprision on create & update
+-- Bug Fixed: Appointment time camprision on update
+
+9th January 
+-- New Feature: Global Time & Date Format Settings
+
+
+
+=========
+VER 3.2
+=========
+
+8th January 
+-- Improvement: Close icon position on all model form fixed
+
+14th Dec. 2012
+
+-- Bug Fixed: Time-Off previous time logic
+-- Bug Fixed: All types of recurring appointment previous time logic
+
+06th Dec. 2012
+
+-- New Feature: Staff hours
+-- New Feature: Staff Level Time Off
+-- New Feature: Bi-Weekly Time-Off
+
+29th Nov. 2012
+
+-- Bug Fixed: jquery confilict JQuery word replaced in all file's js code
+-- Bug Fixed: 'Staff_id' field updated to 'text' in 'ap_Service' table
+-- Bug Fixed: Staff details view
+-- Bug Fixed: jquery confilict JQuery word replaced in all file's js code
+-- Bug Fixed: 'Staff_id' field updated to 'text' in 'ap_Service' table
+-- Bug Fixed: Staff details view
+
+
+
+
+
+Ver 3.1
+=======
+-- New Feature: Client search 
+-- New Feature: Client history
+-- New Feature: currency settings applied
+-- New Feature: customize booking button text
+-- Bug Fixed: notify client options name updated
+-- Bug Fixed: jquery confilict JQuery word replaced in js code
+-- Bug Fixed: free up cancelled appointment slot
+
+
+Ver 3.0
+=======
+-- New Feature: Google Calendar Sync
+
+
