@@ -20,6 +20,8 @@ function appointment_calendar_shortcode() {
     global $wpdb;
     $ClosedDays = array();
     $StartDate = date("Y-m-d");
+	
+	$StartDate = date('Y-m-d',strtotime($StartDate . "+1 days"));
     $EndDate = "2035-01-01";
 
     /*$BusinessHoursTable = $wpdb->prefix . "ap_business_hours";
@@ -42,7 +44,7 @@ function appointment_calendar_shortcode() {
     $myCalendar->setDate(date("d", strtotime($StartDate)), date("m", strtotime($StartDate)), date("Y", strtotime($StartDate)));
     $myCalendar->setPath($DatePicker2);
     $myCalendar->setYearInterval(2035,date('Y'));
-    $StartCalendarFrom = date("Y-m-d", strtotime("-1 day", strtotime($StartDate)));
+    $StartCalendarFrom = date("Y-m-d", strtotime("0 day", strtotime($StartDate)));
     $myCalendar->dateAllow($StartCalendarFrom, $EndDate, false);
     $myCalendar->setOnChange("myChanged()");
 
@@ -178,7 +180,7 @@ function appointment_calendar_shortcode() {
             monthNames: ["<?php _e("January", "appointzilla"); ?>","<?php _e("February", "appointzilla"); ?>","<?php _e("March", "appointzilla"); ?>","<?php _e("April", "appointzilla"); ?>","<?php _e("May", "appointzilla"); ?>","<?php _e("June", "appointzilla"); ?>","<?php _e("July", "appointzilla"); ?>", "<?php _e("August", "appointzilla"); ?>", "<?php _e("September", "appointzilla"); ?>", "<?php _e("October", "appointzilla"); ?>", "<?php _e("November", "appointzilla"); ?>", "<?php _e("December", "appointzilla"); ?>" ],
             monthNamesShort: ["<?php _e("Jan", "appointzilla"); ?>","<?php _e("Feb", "appointzilla"); ?>","<?php _e("Mar", "appointzilla"); ?>","<?php _e("Apr", "appointzilla"); ?>","<?php _e("May", "appointzilla"); ?>","<?php _e("Jun", "appointzilla"); ?>","<?php _e("Jul", "appointzilla"); ?>","<?php _e("Aug", "appointzilla"); ?>","<?php _e("Sept", "appointzilla"); ?>","<?php _e("Oct", "appointzilla"); ?>","<?php _e("nov", "appointzilla"); ?>","<?php _e("Dec", "appointzilla"); ?>"],
             dayNames: ["<?php _e("Sunday", "appointzilla"); ?>","<?php _e("Monday", "appointzilla"); ?>","<?php _e("Tuesday", "appointzilla"); ?>","<?php _e("Wednesday", "appointzilla"); ?>","<?php _e("Thursday", "appointzilla"); ?>","<?php _e("Friday", "appointzilla"); ?>","<?php _e("Saturday", "appointzilla"); ?>"],
-            dayNamesShort: ["<?php _e("Sun", "appointzilla"); ?>","<?php _e("Mon", "appointzilla"); ?>", "<?php _e("Tue", "appointzilla"); ?>", "<?php _e("Wed", "appointzilla"); ?>", "<?php _e("Thus", "appointzilla"); ?>", "<?php _e("Fri", "appointzilla"); ?>", "<?php _e("Sat", "appointzilla"); ?>"],
+            dayNamesShort: ["<?php _e("Sun", "appointzilla"); ?>","<?php _e("Mon", "appointzilla"); ?>", "<?php _e("Tue", "appointzilla"); ?>", "<?php _e("Wed", "appointzilla"); ?>", "<?php _e("Thur", "appointzilla"); ?>", "<?php _e("Fri", "appointzilla"); ?>", "<?php _e("Sat", "appointzilla"); ?>"],
             buttonText: {
                 today: "<?php _e("Today", "appointzilla"); ?>",
                 day: "<?php _e("Day", "appointzilla"); ?>",
@@ -196,7 +198,7 @@ function appointment_calendar_shortcode() {
                     var appdate2 = jQuery.datepicker.formatDate('dd-mm-yy', new Date(start));
                     var check = jQuery.fullCalendar.formatDate(start,'yyyy-MM-dd');
                     var today = jQuery.fullCalendar.formatDate(new Date(),'yyyy-MM-dd');
-                    if(check < today) {
+                    if(check <= today) {
                         // Its a past date
                         alert("<?php _e("Sorry! Appointment cannot be booked for past dates.", "appointzilla"); ?>");
                     } else {
@@ -467,7 +469,25 @@ function appointment_calendar_shortcode() {
                                     }
                 ]
         });
-
+		
+		jQuery('.fc-button-next span').click(function(){
+		var date = jQuery("#calendar").fullCalendar('getDate');
+		var month_int = date.getMonth();
+		var d = new Date();
+		var n = d.getMonth();
+			n = n+3;
+			if(n == month_int){
+		   //alert('Hello');
+			jQuery(".fc-corner-right").addClass('fc-state-disabled');
+			}
+		});
+		
+		
+		jQuery('.fc-button-prev span').click(function(){
+		
+			jQuery(".fc-corner-right").removeClass('fc-state-disabled');
+			
+		});
         //Modal Form Works
         //show first modal
         jQuery('#addappointment').click(function(){

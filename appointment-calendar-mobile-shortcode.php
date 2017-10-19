@@ -609,6 +609,7 @@ function appointment_calendar_mobile_shortcode() {
                         global $wpdb;
                         $ClosedDays = array();
                         $StartDate = date("Y-m-d");
+						$StartDate = date('Y-m-d',strtotime($StartDate . "+1 days"));
                         $EndDate = "2035-01-01";
                         /*$BusinessHoursTable = $wpdb->prefix . "ap_business_hours";
                         $ClosedBusinessDays = $wpdb->get_results("SELECT * FROM `$BusinessHoursTable` WHERE `close` LIKE 'yes'");
@@ -629,7 +630,7 @@ function appointment_calendar_mobile_shortcode() {
                         $myCalendar->setDate(date("d", strtotime($StartDate)), date("m", strtotime($StartDate)), date("Y", strtotime($StartDate)));
                         $myCalendar->setPath($DatePicker2);
                         $myCalendar->setYearInterval(2035,date('Y'));
-                        $StartCalendarFrom = date("Y-m-d", strtotime("-1 day", strtotime($StartDate)));
+                        $StartCalendarFrom = date("Y-m-d", strtotime("0 day", strtotime($StartDate)));
                         $myCalendar->dateAllow($StartCalendarFrom, $EndDate, false);
                         $myCalendar->setOnChange("myChanged()");
 
