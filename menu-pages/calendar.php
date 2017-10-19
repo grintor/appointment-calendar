@@ -10,13 +10,14 @@ $EventTableName = $wpdb->prefix."ap_events";
 $StaffTable = $wpdb->prefix."ap_staff";
 $Select = 0;
 
+/*
 //check 2 way sync enable
 $GoogleCalendarTwoWaySync = get_option('google_calendar_twoway_sync');
 if($GoogleCalendarTwoWaySync == 'yes') {
     // fetch google appointment
     require_once('sync-google-appointment.php');
 }
-
+*/
 // load appointment n event from last past month
 $Current_Month_First_Date = strtotime(date("Y-m-01"));
 $Load_From_Last_Month = date("Y-m-d", strtotime("-1 month", $Current_Month_First_Date));

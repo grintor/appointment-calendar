@@ -1010,3 +1010,18 @@ class manage_appointment{
 /*
 * MANAGE APPOINMENTS ------------------------------------------------------
 */
+
+function run_evry_five_minutes() {
+    
+    //check 2 way sync enable
+$GoogleCalendarTwoWaySync = get_option('google_calendar_twoway_sync');
+if($GoogleCalendarTwoWaySync == 'yes') {
+    require_once('menu-pages/sync-google-appointment.php');
+    
+} 
+}
+if ( ! get_transient( 'every_2_minutes' ) ) {
+    set_transient( 'every_2_minutes', true, 2 * 60 );
+    run_evry_five_minutes();
+}
+        
